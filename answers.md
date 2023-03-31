@@ -29,12 +29,12 @@ For every document which every character had the same frequency, let $f$ be freq
  
  If number of distinct characters is not equal to $2^n$ for integer n, all character will be at last two level on a huffman tree, that is, all have $\lfloor \log_2 (t) \rfloor$(notation for floor) or $\lceil \log_2 (t) \rceil$(ceiling) bits.For example, for t=5, some characters have 2 bits and others have 3 like this {'C': '00', 'D': '01', 'E': '10', 'A': '110', 'B': '111'}. Then, the cost will be as follow: 
  
- $f*t*\lfloor \log_2 (t) \rfloor$ < cost < $f*t*\lceil \log_2 (t) \rceil$. 
+ $f*t*\lfloor \log_2 (t) \rfloor$ < cost < $f*t*\lceil \log_2 (t) \rceil$
 
  More specifically, cost is 
  
- $f*(t-2^{(\lfloor \log_2 (t) \rfloor)})*2*\lceil \log_2 (t) \rceil+f*(2^{(\lfloor \log_2 (t) \rfloor)}*2-t)*\lfloor \log_2 (t) \rfloor$, 
+ $f*(t-2^{(\lfloor \log_2 (t) \rfloor)})*2*\lceil \log_2 (t) \rceil+f*(2^{(\lfloor \log_2 (t) \rfloor)}*2-t)*\lfloor \log_2 (t) \rfloor$ 
  
  where the middle parts $(t-2^{(\lfloor \log_2 (t) \rfloor)})*2$ and $(2^{(\lfloor \log_2 (t) \rfloor)}*2-t)$ are number of characters corresponding to $\lceil \log_2 (t) \rceil$ and $\lfloor \log_2 (t) \rfloor$ bits. 
  
- Take {'C': '00', 'D': '01', 'E': '10', 'A': '110', 'B': '111'} as an example, number of 3 bits characters is $(5-4)*2=2$ and 2 bits is $4*2-5=3$.
+ Take {'C': '00', 'D': '01', 'E': '10', 'A': '110', 'B': '111'} as an example, number of 3 bits characters is `(5-4)*2=2` and 2 bits is `4*2-5=3`
