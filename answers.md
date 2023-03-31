@@ -33,8 +33,8 @@ For every document which every character had the same frequency, let $f$ be freq
 
  More specifically, cost is 
  
- $(f*(t-2^{(\lfloor \log_2 (t) \rfloor)})*2*\lceil \log_2 (t) \rceil+f*(2^{(\lfloor \log_2 (t) \rfloor)}*2-t)*\lfloor \log_2 (t) \rfloor)$ 
+ $f\cdot2\cdot(t-2^{\lfloor \log_2 (t) \rfloor})\cdot\lceil \log_2 (t) \rceil+f\cdot(2\cdot2^{\lfloor \log_2 (t) \rfloor}-t)\cdot\lfloor \log_2 (t) \rfloor$ 
  
- where the middle parts $(t-2^{(\lfloor \log_2 (t) \rfloor)})*2$ and $(2^{(\lfloor \log_2 (t) \rfloor)}*2-t)$ are number of characters corresponding to $\lceil \log_2 (t) \rceil$ and $\lfloor \log_2 (t) \rfloor$ bits. 
+ where the middle parts $2\cdot(t-2^{\lfloor \log_2 (t) \rfloor})$ and $(2\cdot2^{\lfloor \log_2 (t) \rfloor}-t)$ are number of characters corresponding to $\lceil \log_2 (t) \rceil$ and $\lfloor \log_2 (t) \rfloor$ bits. 
  
- Take {'C': '00', 'D': '01', 'E': '10', 'A': '110', 'B': '111'} as an example, number of 3 bits characters is `(5-4)*2=2` and 2 bits is `4*2-5=3`
+ Take {'C': '00', 'D': '01', 'E': '10', 'A': '110', 'B': '111'} as an example, number of 3 bits characters is $2\cdot(5-4)=2$ and 2 bits is $2\cdot4-5=3$
